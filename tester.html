@@ -46,39 +46,57 @@
             $('#save,#update').toggle();
          });
 
-         jPut.users.data=[{"name":"Shabeer","email":"user@gmail.com","phone":"+51 23126"},{"name":"Shibu","email":"user@gmail.com","phone":"+51 23126"},{"name":"Shabeer","email":"user@gmail.com","phone":"+51 23126"}];
+//         jPut.users.data=[{"name":"Shabeert","email":"user@gmail.com","phone":"+51 23126"},{"name":"Shibu","email":"user@gmail.com","phone":"+51 23126"},{"name":"Shabeer","email":"user@gmail.com","phone":"+51 23126"}];
+// jPut.users.data= https://script.google.com/macros/s/AKfycbx-nBR7bff5DvdVHGsojf6Xkweu81ZhGrnp-ht25-Zd1VKA83E/exec?origin=VAB&action=getmytickets ;
+
+               $.getJSON('https://script.google.com/macros/s/AKfycbx-nBR7bff5DvdVHGsojf6Xkweu81ZhGrnp-ht25-Zd1VKA83E/exec?origin=VAB&action=getmytickets', function(emp) { 
+                  //   $('#display').html('<p> Name: ' + emp.name + '</p>'); 
+                  //   $('#display').append('<p>Age : ' + emp.age+ '</p>'); 
+                  //   $('#display').append('<p> Role: ' + emp.role+ '</p>'); 
+                  //   $('#display').append('<p> Company: ' + emp.company+ '</p>'); 
+                  jPut.users.data=emp.items;
+                });
+
+
       });
       </script>
    </head>
    <body>
-      <br/>
+      <!-- <br/>
       Name :<input id="name" type="text" value="Name" />
       Email :<input id="email" type="text" value="user@gmail.com"  />
       Mobile :<input id="phone" type="text" value="+51 23126"  />
       <a href="#" id="save">Save</a>
       <a href="#" id="update" data-id="0" style="display:none;">Update</a>
 
-      <br/>
+      <br/> -->
+
+      <form action="/action_page.php">
+         <label for="fname">First name:</label><br>
+         <input type="text" id="fname" value="John"><br><br>
+         <input type="submit" value="Submit">
+       </form> 
+
       <br/>
       <table border="1">
          <thead>
             <tr>
                <td>Index </td>
-               <td>Name </td>
+               <td>Namen </td>
                <td>Email</td>
                <td>Phone</td>
-               <td>Edit</td>
-               <td>Delete</td>
+               <!-- <td>Edit</td>
+               <td>Delete</td> -->
             </tr> 
          </thead>
          <tbody jput="users" jput-jsondata='[]'>
             <tr>
                <td>{{index}}</td>
-               <td>{{json.name}}</td>
+               <td>{{json.timestamp}}</td>
                <td>{{json.email}}</td>
                <td>{{json.phone}}</td>
-               <td><a href="#" onclick="edit({{index}})">Edit</a></td>
-               <td><a href="#" onclick="jPut.users.remove({{index}})">Delete</a></td>
+               <!-- <td><a href="#" onclick="edit({{index}})">Edit</a></td>
+               <td><a href="#" onclick="jPut.users.remove({{index}})">Delete</a></td> -->
             </tr>
       </tbody>
       </table>
