@@ -1,6 +1,6 @@
 # VAB Centralist
 
-[nieuw ticket aanmaken](nieuwticket.html)
+[nieuw ticket aanmaken](nieuwticket.md)
 
 [lopende tickets](tester.html)
 
