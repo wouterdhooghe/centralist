@@ -1,12 +1,8 @@
 # VAB Centralist
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOlva0dwgnuLdJOz_U_GPd6t6oQQ05XAa3hmjuqdqa2DBUCQ/viewform?usp=pp_url&entry.771913914=Personenvervoer&entry.677900382=VAB" width="640" height="1539" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+[nieuw ticket aanmaken](nieuwticket.html)
 
-
-
----
-
-[testerding](tester.html)
+[lopende tickets](tester.html)
 
 <script>
 $(document).ready(function(){
