@@ -6,7 +6,7 @@
 
 ---
 
-[testerding](url/tester.html)
+[testerding](tester.html)
 
 <script>
 $(document).ready(function(){
