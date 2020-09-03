@@ -82,9 +82,14 @@
          <thead>
             <tr>
                <td>Index </td>
-               <td>Namen </td>
-               <td>Email</td>
-               <td>Phone</td>
+               <td>Timestamp </td>
+               <td>Servicetype</td>
+               <!-- <td>notificationdate</td>
+               <td>notificationhour</td> -->
+               <td>persons</td>
+               <td>pickupurl</td>
+               <td>winner</td>
+               <td>executionconfirm</td>
                <!-- <td>Edit</td>
                <td>Delete</td> -->
             </tr> 
@@ -93,8 +98,13 @@
             <tr>
                <td>{{index}}</td>
                <td>{{json.timestamp}}</td>
-               <td>{{json.email}}</td>
-               <td>{{json.phone}}</td>
+               <td>{{json.servicetype}}</td>
+               <!-- <td>{{json.notificationdate}}</td>
+               <td>{{json.notificationhour}}</td> -->
+               <td>{{json.persons}}</td>
+               <td>{{json.pickupurl}}</td>
+               <td>{{json.winner}}</td>
+               <td>{{json.winnerconfirm}}</td>
                <!-- <td><a href="#" onclick="edit({{index}})">Edit</a></td>
                <td><a href="#" onclick="jPut.users.remove({{index}})">Delete</a></td> -->
             </tr>
